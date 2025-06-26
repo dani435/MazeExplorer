@@ -50,7 +50,7 @@ public class SpikeTrap : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Player") && MazeGenerator.canDie)
+        if (other.CompareTag("Player") && MazeGenerator.canDie && spikeUp)
         {
             OnDeath?.Invoke();
         }
